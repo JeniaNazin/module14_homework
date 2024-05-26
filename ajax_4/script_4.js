@@ -1,4 +1,6 @@
-function myFunction() {
+const btnNode = document.querySelector('.btn-click');
+
+btnNode.addEventListener('click', () => {
   const value1 = +document.querySelector('#number1').value;
   const value2 = +document.querySelector('#number2').value;
   if ((value1 < 100 || value1 > 300 || value1 === NaN) || (value2 < 100 || value2 > 300 || value2 === NaN)) {
@@ -24,4 +26,4 @@ function myFunction() {
     resultImg.src = `https://dummyimage.com/${value1}x${value2}/`;
     document.body.appendChild(resultImg);
   }
-}
+})
